@@ -10,20 +10,21 @@ size = Vector3(2.40381, 1, 2.19934)
 [node name="Node3D" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(2.48715, 0, 0, 0, 1, 0, 0, 0, 1.27412, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.784314, 0, 0, 0, 1, -0.701904, 0, 0.59967)
+transform = Transform3D(10.3058, 0, 0, 0, 0.569906, 0, 0, 0, 21.6944, -0.701904, 0, 0.59967)
 shape = SubResource("BoxShape3D_iayql")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(2.48822, 0, 0, 0, 0.0978959, 0, 0, 0, 2.00764, -0.458945, 0, 0)
+transform = Transform3D(22.0195, 0, 0, 0, 0.446515, 0, 0, 0, 47.4847, -0.458945, 0, 0)
 mesh = SubResource("BoxMesh_bjl2w")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.965876, -0.158755, 0.204646, 0, 0.790127, 0.612943, -0.259005, 0.592027, -0.763165, 0, 1.89547, -3.84164)
+transform = Transform3D(0.341194, -0.707413, 0.618994, 0.7317, 0.613258, 0.297541, -0.590087, 0.351398, 0.726854, 20.9468, 10.0487, 14.4051)
 
 [node name="Node3D" parent="." instance=ExtResource("1_6ohrk")]
-transform = Transform3D(0.103859, 0, 0, 0, 0.103859, 0, 0, 0, 0.103859, -0.759768, 0.390061, 0)
+transform = Transform3D(0.499699, 0, 0, 0, 0.499699, 0, 0, 0, 0.499699, -0.759768, 0.568892, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999987, -0.00339487, 0.00382978, -0.00143687, 0.904455, 0.426566, -0.004912, 0.426555, -0.904448, -0.660748, 0.809169, -1.52511)
+transform = Transform3D(0.999698, -0.0116605, 0.0216516, -0.000862467, 0.863272, 0.504739, -0.0245767, -0.504605, 0.863001, -0.610082, 14.1292, 37.6909)
