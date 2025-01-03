@@ -1,23 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4jpc6ljab1c4"]
+[gd_scene load_steps=6 format=3 uid="uid://c4jpc6ljab1c4"]
 
-[ext_resource type="Script" path="res://mover.gd" id="1_43ow8"]
+[ext_resource type="Script" path="res://bee.gd" id="1_43ow8"]
 [ext_resource type="ArrayMesh" uid="uid://c6esgv2sxgl4i" path="res://vase.obj" id="2_1lbvq"]
+[ext_resource type="PackedScene" uid="uid://482rxnrhe64v" path="res://addons/gdquest_bee_bot/bee_bot_skin.tscn" id="3_r8yqw"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6cm3r"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ni151"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obh4l"]
 vertex_color_is_srgb = true
 albedo_color = Color(0.737255, 0.133333, 0.137255, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0169258, -9.53674e-07, 0.0280933)
 script = ExtResource("1_43ow8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(13.956, 0, 0, 0, 27.2596, 0, 0, 0, 13.8803, 0, 7.0035, 0)
-shape = SubResource("BoxShape3D_6cm3r")
+transform = Transform3D(13.4925, 0, 0, 0, 23.6013, 0, 0, 0, 20.6318, 0, 4.67343, 1.78396)
+shape = SubResource("BoxShape3D_ni151")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.157936, 0.00067963, -0.00648746, -0.000915095, 0.157964, -0.00572949, 0.00645846, 0.00576216, 0.157834, 0, 0, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_obh4l")
 mesh = ExtResource("2_1lbvq")
 skeleton = NodePath("../CollisionShape3D")
+
+[node name="BeebotSkin" parent="." instance=ExtResource("3_r8yqw")]
+transform = Transform3D(-15.883, 0, -1.60857, 0, 15.9642, 0, 1.60857, 0, -15.883, 0, 0, 0)
